@@ -1,0 +1,9 @@
+ .picture{
+    
+    background-image:url('images/locked.jpg');
+    background-size: cover;
+    z-index: 1;
+ }
+ i{
+   cursor: pointer;
+ }
