@@ -6,11 +6,12 @@ export default function Capsules(props) {
   var show = new Date(`'${props.date.slice(0, 10)}'`);
   setInterval(() => {
     settime(time + 1);
-    settime(1);
-  }, 2000);
+  
+  }, 1000);
 
-  if (curr.getTime() >= show.getTime()) {
+  // if (curr.getTime() >= show.getTime()) {
     return (
+      (curr.getTime() >= show.getTime())?
       <div className="card w-50 container my-5">
         <div className="card-body">
           <h5 className="card-title">MESSAGE FOR {props.date.slice(0, 10)}</h5>
@@ -23,10 +24,7 @@ export default function Capsules(props) {
             }}
           ></i>
         </div>
-      </div>
-    );
-  } else {
-    return (
+      </div>:
       <div className="card  w-50 container my-5 picture">
         <div className="card-body">
           <h5>locked till {props.date.slice(0, 10)}</h5>
@@ -37,7 +35,5 @@ export default function Capsules(props) {
             }}
           ></i>
         </div>
-      </div>
-    );
-  }
-}
+      </div>)
+          }

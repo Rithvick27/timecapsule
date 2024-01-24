@@ -32,9 +32,13 @@ export default function Textarea(props) {
   return (
     <div className="container">
       <form>
+        
         <div className="container mb-3 my-5" id="text">
+          <div className="d-flex">
+          <h3>Hello! </h3>
+          <h4 className="mx-2 my-1">{localStorage.getItem("name")}</h4></div>
           <label htmlFor="exampleFormControlTextarea1" className="form-label">
-            Enter your text and time
+           <h4>Enter your message and time</h4> 
           </label>
           <textarea
             type="text"

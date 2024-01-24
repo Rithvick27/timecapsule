@@ -25,8 +25,10 @@ export default function Login(props) {
       if(json.success)
       {
        localStorage.setItem("item",json.atoken);
-        navigate("/");
+       localStorage.setItem("name",json.name);
+        navigate("/add");
         props.showalert("Logged in sucessfully","success");
+        window.location.reload();
 
       }
       else{
@@ -39,7 +41,8 @@ export default function Login(props) {
     }
   return (
     <div className="container">
-      <form onSubmit={handlesub}>
+      <h2>Login to your account</h2>
+      <form className=" my-4" onSubmit={handlesub}>
         <div class="mb-3">
           <label htmlFor="Emai" className="form-label">
             Email address

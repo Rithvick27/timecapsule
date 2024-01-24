@@ -27,21 +27,27 @@ export default function Signup(props) {
     console.log(json);
     if (json.success) {
       localStorage.setItem("item", json.atoken);
-      navigate("/");
+      localStorage.setItem("name",json.name);
+      navigate("/add");
+     
       
       props.showalert("Account created successfully", "success");
     } else {
       props.showalert("Invalid ", "danger");
     }
+    window.location.reload();
   }
 
   function onchange(e) {
     setcred({ ...cred, [e.target.name]: e.target.value });
   }
   return (
+  
     <div className="container">
-      <form onSubmit={handlesubmit}>
+        <h2>Create your account</h2>
+      <form className=" my-4"onSubmit={handlesubmit}>
         <div class="mb-3">
+        
           <label htmlFor="Name" className="form-label">
             Name
           </label>
