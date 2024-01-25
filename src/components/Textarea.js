@@ -1,8 +1,6 @@
-import React, { useState  } from "react";
-
+import React, { useState } from "react";
 
 export default function Textarea(props) {
-  
   const [note, setnote] = useState({
     text: "",
     date: "",
@@ -14,7 +12,7 @@ export default function Textarea(props) {
       text: "",
       date: "",
     });
-    props.showalert("Message added successfully","success")
+    props.showalert("Message added successfully", "success");
   }
 
   function handleonchange(event) {
@@ -27,18 +25,17 @@ export default function Textarea(props) {
       };
     });
   }
- 
 
   return (
     <div className="container">
       <form>
-        
         <div className="container mb-3 my-5" id="text">
           <div className="d-flex">
-          <h3>Hello! </h3>
-          <h4 className="mx-2 my-1">{localStorage.getItem("name")}</h4></div>
+            <h3>Hello! </h3>
+            <h4 className="mx-2 my-1">{localStorage.getItem("name")}</h4>
+          </div>
           <label htmlFor="exampleFormControlTextarea1" className="form-label">
-           <h4>Enter your message and time</h4> 
+            <h4>Enter your message and time</h4>
           </label>
           <textarea
             type="text"
@@ -48,14 +45,12 @@ export default function Textarea(props) {
             onChange={handleonchange}
             rows="3"
             minLength={5}
-            
           ></textarea>
           <input
             type="date"
             name="date"
             value={note.date}
             onChange={handleonchange}
-            
           />
           <input
             className="btn btn-primary my-3 mx-1"

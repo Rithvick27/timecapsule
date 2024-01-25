@@ -11,7 +11,7 @@ import Alert from "./components/Alert";
 import Home from "./components/Home";
 import Info from "./components/Info";
 function App() {
-  const host = "http://localhost:5000";
+  const host = process.env.REACT_APP_host;
   const [notes, setNotes] = useState([]);
   const [alert, setAlert] = useState(null);
   const showalert = (message, type) => {

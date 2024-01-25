@@ -6,34 +6,34 @@ export default function Capsules(props) {
   var show = new Date(`'${props.date.slice(0, 10)}'`);
   setInterval(() => {
     settime(time + 1);
-  
   }, 1000);
 
-  // if (curr.getTime() >= show.getTime()) {
-    return (
-      (curr.getTime() >= show.getTime())?
-      <div className="card w-50 container my-5">
-        <div className="card-body">
-          <h5 className="card-title">MESSAGE FOR {props.date.slice(0, 10)}</h5>
-          <p className="card-text">{props.text}</p>
-          <i
-            className="fa-solid fa-trash cursor-pointer"
-            onClick={() => {
-              props.delete(props.id);
-              props.showalert("Message deleted successfully","success");
-            }}
-          ></i>
-        </div>
-      </div>:
-      <div className="card  w-50 container my-5 picture">
-        <div className="card-body">
-          <h5>locked till {props.date.slice(0, 10)}</h5>
-          <i
-            className="fa-solid fa-trash cursor-pointer"
-            onClick={() => {
-              props.delete(props.id);
-            }}
-          ></i>
-        </div>
-      </div>)
-          }
+  return curr.getTime() >= show.getTime() ? (
+    <div className="card w-50 container my-5">
+      <div className="card-body">
+        <h5 className="card-title">MESSAGE FOR {props.date.slice(0, 10)}</h5>
+        <p className="card-text">{props.text}</p>
+        <i
+          className="fa-solid fa-trash cursor-pointer"
+          onClick={() => {
+            props.delete(props.id);
+            props.showalert("Message deleted successfully", "success");
+          }}
+        ></i>
+      </div>
+    </div>
+  ) : (
+    <div className="card  w-50 container my-5 picture">
+      <div className="card-body">
+        <h5 className="text-light">locked till {props.date.slice(0, 10)}</h5>
+        <i
+          className="fa-solid fa-trash cursor-pointer text-light"
+          onClick={() => {
+            props.delete(props.id);
+            props.showalert("Message deleted successfully", "success");
+          }}
+        ></i>
+      </div>
+    </div>
+  );
+}

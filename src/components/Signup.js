@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
-
+const host = process.env.REACT_APP_host;
 export default function Signup(props) {
   let navigate = useNavigate();
   const [cred, setcred] = useState({
@@ -11,7 +11,7 @@ export default function Signup(props) {
   });
   async function handlesubmit(e) {
     e.preventDefault();
-    const response = await fetch("http://localhost:5000/api/auth/createuser", {
+    const response = await fetch(`${host}/api/auth/createuser`, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
@@ -27,10 +27,9 @@ export default function Signup(props) {
     console.log(json);
     if (json.success) {
       localStorage.setItem("item", json.atoken);
-      localStorage.setItem("name",json.name);
+      localStorage.setItem("name", json.name);
       navigate("/add");
-     
-      
+
       props.showalert("Account created successfully", "success");
     } else {
       props.showalert("Invalid ", "danger");
@@ -42,12 +41,10 @@ export default function Signup(props) {
     setcred({ ...cred, [e.target.name]: e.target.value });
   }
   return (
-  
     <div className="container">
-        <h2>Create your account</h2>
-      <form className=" my-4"onSubmit={handlesubmit}>
+      <h2>Create your account</h2>
+      <form className=" my-4" onSubmit={handlesubmit}>
         <div class="mb-3">
-        
           <label htmlFor="Name" className="form-label">
             Name
           </label>
@@ -94,7 +91,7 @@ export default function Signup(props) {
             Confirm Password
           </label>
           <input
-            type="cpassword"
+            type="password"
             class="form-control"
             id="cPassword"
             name="cPassword"

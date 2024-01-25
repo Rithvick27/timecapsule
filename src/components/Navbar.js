@@ -5,16 +5,14 @@ import { useLocation } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 
 export default function Navbar() {
-  const nav=useNavigate();
+  const nav = useNavigate();
   let location = useLocation();
   useEffect(() => {}, [location]);
-  function handlelogout()
-  {
+  function handlelogout() {
     localStorage.removeItem("item");
     localStorage.removeItem("name");
     nav("/login");
-    window.location.reload()
-
+    window.location.reload();
   }
 
   return (
@@ -36,7 +34,7 @@ export default function Navbar() {
         </button>
         <div className="collapse navbar-collapse" id="navbarSupportedContent">
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-          <li className="nav-item">
+            <li className="nav-item">
               <Link
                 className={`nav-link ${
                   location.pathname === "/" ? "active" : ""
@@ -70,10 +68,13 @@ export default function Navbar() {
               </Link>
             </li>
           </ul>
-          {!localStorage.getItem("item")?<form className="d-flex" role="search">
-          {/* <Link className="btn btn-primary mx-2" to="/login" role="button">Login</Link>
-          <Link className="btn btn-primary mx-2" to="/signup" role="button">Signup</Link> */}
-      </form>:<button className="btn btn-primary mx-2 " onClick={handlelogout}>Logout</button>}
+          {!localStorage.getItem("item") ? (
+            <form className="d-flex" role="search"></form>
+          ) : (
+            <button className="btn btn-primary mx-2 " onClick={handlelogout}>
+              Logout
+            </button>
+          )}
         </div>
       </div>
     </nav>

@@ -1,6 +1,6 @@
 import React,{ useState}from "react";
 import { useNavigate } from "react-router-dom";
-
+const host=process.env.REACT_APP_host;
 export default function Login(props) {
     const navigate=useNavigate();
 
@@ -11,7 +11,7 @@ export default function Login(props) {
     async function handlesub(e)
     {
        e.preventDefault();
-       const response = await fetch('http://localhost:5000/api/auth/loginuser', {
+       const response = await fetch(`${host}/api/auth/loginuser`, {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
