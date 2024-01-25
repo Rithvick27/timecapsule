@@ -27,6 +27,7 @@ function App() {
   //add data
   async function addNote(newNote) {
     const { text, date } = newNote;
+    // eslint-disable-next-line
     const response = await fetch(`${host}/api/data/addthedata`, {
       method: "POST",
       headers: {
@@ -35,6 +36,7 @@ function App() {
       },
 
       body: JSON.stringify({ text, date }), // body data type must match "Content-Type" header
+      
     });
   }
   // fetching all data
@@ -55,9 +57,11 @@ function App() {
       getallnotes();
     } else {
     }
+    // eslint-disable-next-line
   }, []);
   //delete data
   async function deletedata(id) {
+    // eslint-disable-next-line
     const response = await fetch(`${host}/api/data/delthedata/${id}`, {
       method: "DELETE",
       headers: {
