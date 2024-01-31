@@ -9,7 +9,7 @@ export default function Capsules(props) {
   }, 1000);
 
   return curr.getTime() >= show.getTime() ? (
-    <div className="card w-50 container my-5">
+    <div className="card w-50 container my-5 ">
       <div className="card-body">
         <h5 className="card-title">MESSAGE FOR {props.date.slice(0, 10)}</h5>
         <p className="card-text">{props.text}</p>
@@ -23,7 +23,7 @@ export default function Capsules(props) {
       </div>
     </div>
   ) : (
-    <div className="card  w-50 container my-5 picture">
+    <div className="card  w-50 container my-5 picture ">
       <div className="card-body">
         <h5 className="text-light">locked till {props.date.slice(0, 10)}</h5>
         <i

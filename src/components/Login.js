@@ -40,7 +40,7 @@ export default function Login(props) {
        setcred({...cred,[e.target.name]:e.target.value})
     }
   return (
-    <div className="container">
+    <div className="container ">
       <h2>Login to your account</h2>
       <form className=" my-4" onSubmit={handlesub}>
         <div class="mb-3">

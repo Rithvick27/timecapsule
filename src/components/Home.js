@@ -2,7 +2,38 @@ import React from "react";
 
 export default function Home() {
   return (
-    // <div
+
+    <div className="flex-auto">
+      
+
+    </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+    //<div
     //   className="card h-auto w-25 position-absolute top-50 start-50 translate-middle"
     //   style={{ width: "18 rem" }}
     // >
@@ -29,23 +60,23 @@ export default function Home() {
     //     )}
     //   </div>
     // </div>
-    <div className="w-100 h-25 card text-bg-dark p-3 mb-2 bg-secondary text-white container-fluid position-relative">
-      <div className="m-auto">
-        <img
-          src="images/logotc.jpeg"
-          className="figure-img opacity-75 img-fluid object-fit-contain border rounded m-auto"
-          alt="timecapsule"
-        />
-      </div>
+    // <div className=" logo w-100 h-25 card text-bg-dark p-3 mb-2 bg-secondary text-white container-fluid position-relative bg-black">
+    //   {/* <div className="m-auto">
+    //     <img
+    //       src="images/logotc.jpeg"
+    //       className="figure-img opacity-75 img-fluid object-fit-contain border rounded m-auto"
+    //       alt="timecapsule"
+    //     />
+    //   </div> */} 
 
-      <div className="card-img-overlay">
-        <h1 className="card-title text-dark text-center display-1">
-          TIMECAPSULE
-        </h1>
-        {/* <h1 className="card-text text-center blockquote fs-2 text-secondary-emphasis">
-          A Website where You can write a message for future you
-        </h1> */}
-      </div>
-    </div>
+    //   <div className="card-img-overlay">
+    //     <h1 className="card-title text-dark text-center display-1">
+    //       TIMECAPSULE
+    //     </h1>
+    //     {/* <h1 className="card-text text-center blockquote fs-2 text-secondary-emphasis">
+    //       A Website where You can write a message for future you
+    //     </h1> */}
+    //   </div>
+    // </div>
   );
 }

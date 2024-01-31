@@ -1,9 +1,26 @@
- .picture{
+body{
+  width: 100vw;
+  height: 100vh;
+    background-image:url('images/cggg.png');
     
-    background-image:url('images/imagetc1.jpeg');
-    background-size: cover;
-    z-index: 1;
+   
+    background-repeat: no-repeat;
+    background-size:cover;
+background-position:initial;
+
+    min-height: 100%;
+    
  }
+ @media only screen and (max-width: 844px) {
+  body {
+    background-position:center;
+  }
+}
+ .blur{
+  height: 2px;
+  width: 2px;
+ }
+ 
  i{
    cursor: pointer;
  }
