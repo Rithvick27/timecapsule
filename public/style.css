@@ -1,16 +1,17 @@
 body{
   width: 100vw;
   height: 100vh;
-    background-image:url('images/cggg.png');
+
+    background-image:url('images/moon.jpeg');
     
    
     background-repeat: no-repeat;
     background-size:cover;
 background-position:initial;
 
-    min-height: 100%;
-    
- }
+    min-height: 100%; 
+}
+ 
  @media only screen and (max-width: 844px) {
   body {
     background-position:center;
@@ -24,3 +25,47 @@ background-position:initial;
  i{
    cursor: pointer;
  }
+ .arvo-regular {
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+.arvo-regular-italic {
+  font-family: "Arvo", serif;
+  font-weight: 400;
+  font-style: italic;
+}
+
+.arvo-bold {
+  font-family: "Arvo", serif;
+  font-weight: 700;
+  font-style: normal;
+}
+
+.arvo-bold-italic {
+  font-family: "Arvo", serif;
+  font-weight: 700;
+  font-style: italic;
+}
+.large{
+  font-size:90px;
+}
+@media only screen and (max-width: 838px) {
+  .large{
+    font-size:70px;
+  }
+}
+@media only screen and (max-width:382px) {
+  .large{
+    font-size:60px;
+  }
+}
+@media only screen and (max-width:332px) {
+  .large{
+    font-size:50px;
+  }
+}
+.night{
+  color: aliceblue;
+}

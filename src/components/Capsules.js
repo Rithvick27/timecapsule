@@ -11,7 +11,7 @@ export default function Capsules(props) {
   return curr.getTime() >= show.getTime() ? (
     <div className="card w-50 container my-5 ">
       <div className="card-body">
-        <h5 className="card-title">MESSAGE FOR {props.date.slice(0, 10)}</h5>
+        <h5 className="card-title arvo-bold">MESSAGE FOR {props.date.slice(0, 10)}</h5>
         <p className="card-text">{props.text}</p>
         <i
           className="fa-solid fa-trash cursor-pointer"
@@ -25,7 +25,7 @@ export default function Capsules(props) {
   ) : (
     <div className="card  w-50 container my-5 picture ">
       <div className="card-body">
-        <h5 className="text-light">locked till {props.date.slice(0, 10)}</h5>
+        <h5 className="text-light arvo-regular">Locked till {props.date.slice(0, 10)}</h5>
         <i
           className="fa-solid fa-trash cursor-pointer text-light"
           onClick={() => {

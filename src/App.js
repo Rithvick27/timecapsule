@@ -10,10 +10,13 @@ import Signup from "./components/Signup";
 import Alert from "./components/Alert";
 import Home from "./components/Home";
 import Info from "./components/Info";
+import Homen from "./components/Homen";
+import $ from 'jquery'; 
 function App() {
   const host = process.env.REACT_APP_host;
   const [notes, setNotes] = useState([]);
   const [alert, setAlert] = useState(null);
+  var curr = new Date();
   const showalert = (message, type) => {
     setAlert({
       msg: message,
@@ -75,13 +78,29 @@ function App() {
     });
     setNotes(newdata);
   }
+  if(curr.getHours()>=6 && curr.getHours()<=17)
+  {
+    $('body').css('background', 'url(images/sun.jpeg)');
+    $('body').css('background-repeat', 'no-repeat');
+    $('body').css('background-size', 'cover');
+    $('body').css('background-position', 'initial');
+  }
+  else{
+    $('body').css('background', 'url(images/moon.jpeg)');
+    $('body').css('background-repeat', 'no-repeat');
+    $('body').css('background-size', 'cover');
+    $('body').css('background-position', 'initial');
+  }
+  
+  
+console.log(curr.getHours())
   return (
     <Router>
       <div>
         <Navbar />
         <Alert alert={alert} />
         <Routes>
-          <Route path="/" element={<Home />}></Route>
+          <Route path="/" element={curr.getHours()>=6 && curr.getHours()<=17 ?(<Home />):(<Homen />)}></Route>
           <Route
             path="/capsules"
             element={

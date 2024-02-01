@@ -31,11 +31,11 @@ export default function Textarea(props) {
       <form>
         <div className="container mb-3 my-5" id="text">
           <div className="d-flex">
-            <h3>Hello! </h3>
-            <h4 className="mx-2 my-1">{localStorage.getItem("name")}</h4>
+            <h3 className="arvo-regular">Hello! </h3>
+            <h4 className="mx-2 my-1 arvo-regular ">{localStorage.getItem("name")}</h4>
           </div>
           <label htmlFor="exampleFormControlTextarea1" className="form-label">
-            <h4>Enter your message and time</h4>
+            <h4 className="arvo-regular">Enter your message and time</h4>
           </label>
           <textarea
             type="text"
@@ -53,7 +53,7 @@ export default function Textarea(props) {
             onChange={handleonchange}
           />
           <input
-            className="btn btn-primary my-3 mx-1"
+            className="btn btn-primary my-3 mx-1 arvo-regular"
             type="submit"
             onClick={handlesubmit}
             value="Submit"

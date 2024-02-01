@@ -18,7 +18,7 @@ export default function Navbar() {
   return (
     <nav className="navbar navbar-expand-lg navbar-dark bg-dark">
       <div className="container-fluid">
-        <a className="navbar-brand mb-0 h1" href="/">
+        <a className="navbar-brand mb-0 h1 arvo-bold" href="/">
           TIMECAP
         </a>
         <button
@@ -36,7 +36,7 @@ export default function Navbar() {
           <ul className="navbar-nav me-auto mb-2 mb-lg-0">
             <li className="nav-item">
               <Link
-                className={`nav-link ${
+                className={`nav-link arvo-bold ${
                   location.pathname === "/" ? "active" : ""
                 }`}
                 aria-current="page"
@@ -47,7 +47,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link ${
+                className={`nav-link arvo-bold ${
                   location.pathname === "/adddata" ? "active" : ""
                 }`}
                 aria-current="page"
@@ -58,7 +58,7 @@ export default function Navbar() {
             </li>
             <li className="nav-item">
               <Link
-                className={`nav-link ${
+                className={`nav-link arvo-bold ${
                   location.pathname === "/capsules" ? "active" : ""
                 }`}
                 aria-current="page"
@@ -71,16 +71,16 @@ export default function Navbar() {
           {!localStorage.getItem("item") ? (
             <form className="d-flex" role="search">
                <div className="container ">
-            <Link to="/login" className="btn btn-primary  ">
-              login
+            {/* <Link to="/login" className="btn btn-primary arvo-bold ">
+              Login
             </Link>
-            <Link to="/signup" className="btn btn-primary mx-2">
+            <Link to="/signup" className="btn btn-primary mx-2 arvo-bold">
               Sign up
-            </Link>
+            </Link> */}
           </div>
             </form>
           ) : (
-            <button className="btn btn-primary mx-2 " onClick={handlelogout}>
+            <button className="btn btn-light mx-2 " onClick={handlelogout}>
               Logout
             </button>
           )}

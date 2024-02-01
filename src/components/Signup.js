@@ -42,10 +42,10 @@ export default function Signup(props) {
   }
   return (
     <div className="container">
-      <h2>Create your account</h2>
+      <h2 className="arvo-bold"> Create your account</h2>
       <form className=" my-4" onSubmit={handlesubmit}>
         <div class="mb-3">
-          <label htmlFor="Name" className="form-label">
+          <label htmlFor="Name" className="form-label arvo-regular">
             Name
           </label>
           <input
@@ -59,12 +59,12 @@ export default function Signup(props) {
           />
         </div>
         <div class="mb-3">
-          <label htmlFor="Email" className="form-label">
+          <label htmlFor="Email" className="form-label arvo-regular">
             Email address
           </label>
           <input
             type="email"
-            className="form-control"
+            className="form-control arvo-regular"
             id="Email"
             name="Email"
             onChange={onchange}
@@ -73,7 +73,7 @@ export default function Signup(props) {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="Password" className="form-label">
+          <label htmlFor="Password" className="form-label arvo-regular">
             Password
           </label>
           <input
@@ -87,7 +87,7 @@ export default function Signup(props) {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="Password" className="form-label">
+          <label htmlFor="Password" className="form-label arvo-regular">
             Confirm Password
           </label>
           <input
@@ -100,7 +100,7 @@ export default function Signup(props) {
             minLength={5}
           />
         </div>
-        <button type="submit" className="btn btn-primary">
+        <button type="submit" className="btn btn-dark">
           Submit
         </button>
       </form>

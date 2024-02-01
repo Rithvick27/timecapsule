@@ -41,10 +41,10 @@ export default function Login(props) {
     }
   return (
     <div className="container ">
-      <h2>Login to your account</h2>
+      <h2 className="arvo-bold">Login to your account</h2>
       <form className=" my-4" onSubmit={handlesub}>
         <div class="mb-3">
-          <label htmlFor="Emai" className="form-label">
+          <label htmlFor="Emai" className="form-label arvo-regular">
             Email address
           </label>
           <input
@@ -57,7 +57,7 @@ export default function Login(props) {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="Password" className="form-label">
+          <label htmlFor="Password" className="form-label arvo-regular ">
             Password
           </label>
           <input
@@ -68,7 +68,7 @@ export default function Login(props) {
             onChange={onchange}
           />
         </div>
-        <button type="submit" className="btn btn-primary" >
+        <button type="submit" className="btn btn-dark" >
           Submit
         </button>
       </form>
