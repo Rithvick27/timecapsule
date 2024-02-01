@@ -25,7 +25,7 @@ export default function Capsules(props) {
   ) : (
     <div className="card  w-50 container my-5 picture ">
       <div className="card-body">
-        <h5 className="text-dark arvo-regular">Locked till {props.date.slice(0, 10)}</h5>
+        <h5 className="text-dark arvo-bold">Locked till {props.date.slice(0, 10)}</h5>
         <i
           className="fa-solid fa-trash cursor-pointer text-dark"
           onClick={() => {
