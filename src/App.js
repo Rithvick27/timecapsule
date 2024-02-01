@@ -92,8 +92,7 @@ function App() {
     $('body').css('background-position', 'initial');
   }
   
-  
-console.log(curr.getHours())
+
   return (
     <Router>
       <div>
