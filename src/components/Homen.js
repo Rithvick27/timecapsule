@@ -20,8 +20,8 @@ export default function Homen() {
           </div>
         ) : (
           <div>
-            <h2 className="arvo-regular my-5">WELCOME TO TIMECAPSULE</h2>
-            <h1 className="arvo-regular-italic">{localStorage.getItem("name")}</h1>
+            <h2 className="arvo-regular night my-5">WELCOME TO TIMECAPSULE</h2>
+            <h1 className="arvo-regular-italic night ">{localStorage.getItem("name")}</h1>
           </div>
         )}
       </div>
