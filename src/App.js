@@ -84,12 +84,14 @@ function App() {
     $('body').css('background-repeat', 'no-repeat');
     $('body').css('background-size', 'cover');
     $('body').css('background-position', 'initial');
+    $('body').css('min-height', '100%');
   }
   else{
     $('body').css('background', 'url(images/moon.jpeg)');
     $('body').css('background-repeat', 'no-repeat');
     $('body').css('background-size', 'cover');
     $('body').css('background-position', 'initial');
+    $('body').css('min-height', '100%');
   }
   
 
