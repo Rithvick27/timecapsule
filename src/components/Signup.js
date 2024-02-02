@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 const host = process.env.REACT_APP_host;
 export default function Signup(props) {
+  var curr= new Date();
   let navigate = useNavigate();
   const [cred, setcred] = useState({
     name: "",
@@ -42,10 +43,10 @@ export default function Signup(props) {
   }
   return (
     <div className="container">
-      <h2 className="arvo-bold"> Create your account</h2>
+      <h2 className= {curr.getHours()>=6 && curr.getHours()<=17 ?"arvo-bold ":"arvo-bold night  "}> Create your account</h2>
       <form className=" my-4" onSubmit={handlesubmit}>
         <div class="mb-3">
-          <label htmlFor="Name" className="form-label arvo-regular">
+          <label htmlFor="Name" className= {curr.getHours()>=6 && curr.getHours()<=17 ?"form-label arvo-regular":"form-label arvo-regular night"}>
             Name
           </label>
           <input
@@ -59,7 +60,7 @@ export default function Signup(props) {
           />
         </div>
         <div class="mb-3">
-          <label htmlFor="Email" className="form-label arvo-regular">
+          <label htmlFor="Email" className={curr.getHours()>=6 && curr.getHours()<=17 ?"form-label arvo-regular":"form-label arvo-regular night"}>
             Email address
           </label>
           <input
@@ -73,7 +74,7 @@ export default function Signup(props) {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="Password" className="form-label arvo-regular">
+          <label htmlFor="Password" className={curr.getHours()>=6 && curr.getHours()<=17 ?"form-label arvo-regular":"form-label arvo-regular night"}>
             Password
           </label>
           <input
@@ -87,7 +88,7 @@ export default function Signup(props) {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="Password" className="form-label arvo-regular">
+          <label htmlFor="Password" className={curr.getHours()>=6 && curr.getHours()<=17 ?"form-label arvo-regular":"form-label arvo-regular night"}>
             Confirm Password
           </label>
           <input
@@ -100,7 +101,7 @@ export default function Signup(props) {
             minLength={5}
           />
         </div>
-        <button type="submit" className="btn btn-dark">
+        <button type="submit" className="btn btn-dark ">
           Submit
         </button>
       </form>

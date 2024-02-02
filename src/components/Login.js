@@ -2,6 +2,7 @@ import React,{ useState}from "react";
 import { useNavigate } from "react-router-dom";
 const host=process.env.REACT_APP_host;
 export default function Login(props) {
+  var curr=new Date();
     const navigate=useNavigate();
 
     const [cred,setcred] = useState({
@@ -41,10 +42,10 @@ export default function Login(props) {
     }
   return (
     <div className="container ">
-      <h2 className="arvo-bold">Login to your account</h2>
+      <h2 className={curr.getHours()>=6 && curr.getHours()<=17 ?"arvo-bold":"arvo-bold night"}>Login to your account</h2>
       <form className=" my-4" onSubmit={handlesub}>
         <div class="mb-3">
-          <label htmlFor="Emai" className="form-label arvo-regular">
+          <label htmlFor="Email" className={curr.getHours()>=6 && curr.getHours()<=17 ?"form-label arvo-regular":"form-label arvo-regular night"}>
             Email address
           </label>
           <input
@@ -57,7 +58,7 @@ export default function Login(props) {
           />
         </div>
         <div className="mb-3">
-          <label htmlFor="Password" className="form-label arvo-regular ">
+          <label htmlFor="Password" className={curr.getHours()>=6 && curr.getHours()<=17 ?"form-label arvo-regular":"form-label arvo-regular night"}>
             Password
           </label>
           <input

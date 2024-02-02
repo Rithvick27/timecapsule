@@ -11,7 +11,7 @@ import Alert from "./components/Alert";
 import Home from "./components/Home";
 import Info from "./components/Info";
 import Homen from "./components/Homen";
-import $ from 'jquery'; 
+import $ from "jquery";
 function App() {
   const host = process.env.REACT_APP_host;
   const [notes, setNotes] = useState([]);
@@ -39,7 +39,6 @@ function App() {
       },
 
       body: JSON.stringify({ text, date }), // body data type must match "Content-Type" header
-      
     });
   }
   // fetching all data
@@ -78,22 +77,23 @@ function App() {
     });
     setNotes(newdata);
   }
-  if(curr.getHours()>=6 && curr.getHours()<=17)
-  {
-    $('body').css('background', 'url(images/sun.jpeg)');
-    $('body').css('background-repeat', 'no-repeat');
-    $('body').css('background-size', 'cover');
-    $('body').css('background-position', 'initial');
-    $('body').css('min-height', '100%');
+  if (curr.getHours() >= 6 && curr.getHours() <= 17) {
+    $("body").css("background", "url(images/sun.jpeg)");
+    $("body").css("background-repeat", "repeat-y");
+    $("body").css("background-size", "cover");
+    $("body").css("background-position", "initial");
+    $("body").css("min-height", "100%");
+
+    $("body").css("width", "100vw");
+  } else {
+    $("body").css("background", "url(images/moon.jpeg)");
+    $("body").css("background-repeat", "repeat-y");
+    $("body").css("background-size", "cover");
+    $("body").css("background-position", "initial");
+    $("body").css("min-height", "100%");
+
+    $("body").css("width", "100%");
   }
-  else{
-    $('body').css('background', 'url(images/moon.jpeg)');
-    $('body').css('background-repeat', 'no-repeat');
-    $('body').css('background-size', 'cover');
-    $('body').css('background-position', 'initial');
-    $('body').css('min-height', '100%');
-  }
-  
 
   return (
     <Router>
@@ -101,7 +101,16 @@ function App() {
         <Navbar />
         <Alert alert={alert} />
         <Routes>
-          <Route path="/" element={curr.getHours()>=6 && curr.getHours()<=17 ?(<Home />):(<Homen />)}></Route>
+          <Route
+            path="/"
+            element={
+              curr.getHours() >= 6 && curr.getHours() <= 17 ? (
+                <Home />
+              ) : (
+                <Homen />
+              )
+            }
+          ></Route>
           <Route
             path="/capsules"
             element={
