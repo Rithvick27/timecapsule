@@ -32,11 +32,35 @@ export default function Textarea(props) {
       <form>
         <div className="container mb-3 my-5" id="text">
           <div className="d-flex">
-            <h3 className= {curr.getHours()>=6 && curr.getHours()<=17 ?"arvo-regular ":"arvo-regular night  "}>Hello! </h3>
-            <h4 className={curr.getHours()>=6 && curr.getHours()<=17 ?"mx-2 my-1 arvo-regular ":"mx-2 my-1 arvo-regular night  "}>{localStorage.getItem("name")}</h4>
+            <h3
+              className={
+                curr.getHours() >= 6 && curr.getHours() <= 17
+                  ? "arvo-regular "
+                  : "arvo-regular night  "
+              }
+            >
+              Hello!{" "}
+            </h3>
+            <h4
+              className={
+                curr.getHours() >= 6 && curr.getHours() <= 17
+                  ? "mx-2 my-1 arvo-regular "
+                  : "mx-2 my-1 arvo-regular night  "
+              }
+            >
+              {localStorage.getItem("name")}
+            </h4>
           </div>
           <label htmlFor="exampleFormControlTextarea1" className="form-label">
-            <h4 className= {curr.getHours()>=6 && curr.getHours()<=17 ?"arvo-regular ":"arvo-regular night  "}>Enter your message and time</h4>
+            <h4
+              className={
+                curr.getHours() >= 6 && curr.getHours() <= 17
+                  ? "arvo-regular "
+                  : "arvo-regular night  "
+              }
+            >
+              Enter your message and time
+            </h4>
           </label>
           <textarea
             type="text"
@@ -54,7 +78,11 @@ export default function Textarea(props) {
             onChange={handleonchange}
           />
           <input
-            className= {curr.getHours()>=6 && curr.getHours()<=17 ?"btn btn-primary my-3 mx-1 arvo-regular":"btn btn-dark my-3 mx-1 arvo-regular"}
+            className={
+              curr.getHours() >= 6 && curr.getHours() <= 17
+                ? "btn btn-primary my-3 mx-1 arvo-regular"
+                : "btn btn-dark my-3 mx-1 arvo-regular"
+            }
             type="submit"
             onClick={handlesubmit}
             value="Submit"

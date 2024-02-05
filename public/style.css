@@ -2,9 +2,8 @@ body{
   width: 100vw;
   height: 100vh;
 
-    background-image:url('images/moon.jpeg');
+    background-color: aliceblue;
     
-   
     background-repeat: no-repeat;
     background-size:cover;
 background-position:initial;

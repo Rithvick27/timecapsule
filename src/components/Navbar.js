@@ -70,14 +70,14 @@ export default function Navbar() {
           </ul>
           {!localStorage.getItem("item") ? (
             <form className="d-flex" role="search">
-               <div className="container ">
-            {/* <Link to="/login" className="btn btn-primary arvo-bold ">
+              <div className="container ">
+                {/* <Link to="/login" className="btn btn-primary arvo-bold ">
               Login
             </Link>
             <Link to="/signup" className="btn btn-primary mx-2 arvo-bold">
               Sign up
             </Link> */}
-          </div>
+              </div>
             </form>
           ) : (
             <button className="btn btn-light mx-2 " onClick={handlelogout}>

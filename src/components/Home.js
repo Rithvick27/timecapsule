@@ -3,12 +3,11 @@ import { Link } from "react-router-dom";
 
 export default function Home() {
   return (
-  <div>
-    <div className="text-center">
-   
-     <h1 className="arvo-bold large">TIMECAP</h1>
-     <h3 className="arvo-regular ">A Message for Future you</h3>
-     {!localStorage.getItem("item") ? (
+    <div>
+      <div className="text-center">
+        <h1 className="arvo-bold large">TIMECAP</h1>
+        <h3 className="arvo-regular ">A Message for Future you</h3>
+        {!localStorage.getItem("item") ? (
           <div>
             <Link to="/login" className="btn btn-dark btn-lg my-5">
               Login
@@ -20,34 +19,13 @@ export default function Home() {
         ) : (
           <div>
             <h2 className="arvo-regular my-5">WELCOME TO TIMECAPSULE</h2>
-            <h1 className="arvo-regular-italic">{localStorage.getItem("name")}</h1>
+            <h1 className="arvo-regular-italic">
+              {localStorage.getItem("name")}
+            </h1>
           </div>
         )}
       </div>
     </div>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
     //<div
     //   className="card h-auto w-25 position-absolute top-50 start-50 translate-middle"
@@ -83,7 +61,7 @@ export default function Home() {
     //       className="figure-img opacity-75 img-fluid object-fit-contain border rounded m-auto"
     //       alt="timecapsule"
     //     />
-    //   </div> */} 
+    //   </div> */}
 
     //   <div className="card-img-overlay">
     //     <h1 className="card-title text-dark text-center display-1">
