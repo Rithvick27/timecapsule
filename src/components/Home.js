@@ -18,7 +18,7 @@ export default function Home() {
           </div>
         ) : (
           <div>
-            <h2 className="arvo-regular my-5">WELCOME TO TIMECAPSULE</h2>
+            <h2 className="arvo-regular my-5">WELCOME TO TIMECAP</h2>
             <h1 className="arvo-regular-italic">
               {localStorage.getItem("name")}
             </h1>
