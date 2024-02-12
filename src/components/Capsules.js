@@ -1,12 +1,15 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 export default function Capsules(props) {
   const [time, settime] = useState(1);
 
   var curr = new Date();
   var show = new Date(`'${props.date.slice(0, 10)}'`);
-  setInterval(() => {
+  let timer = setInterval(() => {
     settime(time + 1);
   }, 1000);
+  useEffect(() => {
+    return () => clearInterval(timer);
+  });
 
   return curr.getTime() >= show.getTime() ? (
     <div className="card w-50 container my-5 ">
